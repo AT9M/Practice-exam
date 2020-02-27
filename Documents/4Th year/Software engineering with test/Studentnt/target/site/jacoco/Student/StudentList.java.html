@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudentList.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Studentnt</a> &gt; <a href="index.source.html" class="el_package">Student</a> &gt; <span class="el_source">StudentList.java</span></div><h1>StudentList.java</h1><pre class="source lang-java linenums">package Student;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+<span class="fc" id="L6">public class StudentList {</span>
+
+<span class="fc" id="L8">    private ArrayList&lt;Student&gt; studentArrayList = new ArrayList&lt;Student&gt;();</span>
+    public int Count;
+
+    public void addStudent(Student student)
+    {
+<span class="fc" id="L13">        studentArrayList.add(student);</span>
+<span class="fc" id="L14">        Count++;</span>
+<span class="fc" id="L15">    }</span>
+    public Student getStudent(String name)
+    {
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        for (int i = 0 ; i&lt;studentArrayList.size();i++){</span>
+<span class="fc" id="L19">            Student S =studentArrayList.get(i);</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            if(S.getName()==name)</span>
+            {
+<span class="fc" id="L22">                return S;</span>
+            }
+        }
+<span class="fc" id="L25">        return null;</span>
+    }
+
+    public int getCount() {
+<span class="fc" id="L29">        return Count;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
